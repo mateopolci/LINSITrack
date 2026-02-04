@@ -21,7 +21,7 @@ func NewTpService(db *gorm.DB) *TpService {
 
 func (s *TpService) GetAllTps() ([]models.TpModel, error) {
 	var tps []models.TpModel
-	result := s.db.Preload("Comision").Find(&tps)
+	result := s.db.Preload("Comision").Preload("Competencias").Find(&tps)
 	if result.Error != nil {
 		return nil, result.Error
 	}
@@ -30,7 +30,7 @@ func (s *TpService) GetAllTps() ([]models.TpModel, error) {
 
 func (s *TpService) GetTpByID(id int) (*models.TpModel, error) {
 	var tp models.TpModel
-	result := s.db.Preload("Comision").First(&tp, id)
+	result := s.db.Preload("Comision").Preload("Competencias").First(&tp, id)
 	if result.Error != nil {
 		return nil, result.Error
 	}
@@ -114,6 +114,7 @@ func (s *TpService) GetTpsByAlumnoID(alumnoID int) ([]models.TpModel, error) {
 		Where("cursadas.alumno_id = ? AND tp_models.vigente = ?", alumnoID, true).
 		Preload("Comision").
 		Preload("Comision.Materia").
+		Preload("Competencias").
 		Order("tp_models.fecha_entrega DESC").
 		Find(&tps)
 

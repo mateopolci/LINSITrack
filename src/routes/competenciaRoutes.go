@@ -21,7 +21,5 @@ func SetupCompetenciaRoutes(router *gin.Engine, service *services.CompetenciaSer
 	competenciasGroup.PATCH("/:id", middleware.RequireRole(models.RoleProfesor, models.RoleAdmin), competenciaController.UpdateCompetencia)
 
 	competenciasGroup.DELETE("/:id", middleware.RequireRole(models.RoleAdmin), competenciaController.DeleteCompetencia)
-	// TO-DO: COMPLETAR ENDPOINTS CON REQUERIMIENTOS DEL FRONTEND
-	// TO-DO: REVISAR A MISMO FIN LOS ROLES NECESARIOS PARA C/1
 
 }

@@ -5,7 +5,7 @@ type Competencia struct {
 	Nombre      string  `json:"nombre" gorm:"column:nombre;type:varchar(100);not null"`
 	Descripcion string  `json:"descripcion" gorm:"column:descripcion;type:text;null"`
 	TpId        int     `json:"tp_id" gorm:"column:tp_id;type:int;not null"`
-	Tp          TpModel `json:"tp" gorm:"foreignKey:TpId;references:ID"`
+	Tp          TpModel `json:"-" gorm:"foreignKey:TpId;references:ID"`
 }
 
 type CompetenciaUpdateRequest struct {
