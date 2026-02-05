@@ -1,0 +1,24 @@
+meta {
+  name: Crear
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8080/comisiones
+  body: json
+  auth: inherit
+}
+
+body:json {
+    {
+      "nombre": "S33 - Bases de Datos",
+      "horarios": "Sábados 10:00 - 14:00",
+      "materia_id": 3
+    }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

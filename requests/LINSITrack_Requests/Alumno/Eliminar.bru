@@ -1,0 +1,26 @@
+meta {
+  name: Eliminar
+  type: http
+  seq: 5
+}
+
+delete {
+  url: http://localhost:8080/alumnos/7
+  body: json
+  auth: inherit
+}
+
+body:json {
+    {
+      "nombre": "Juan Carlos",
+      "apellido": "Segundo",
+      "legajo": "52313",
+      "password": "juancarlossegundo",
+      "email": "juancarlossegundo@linsi.com"
+    }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

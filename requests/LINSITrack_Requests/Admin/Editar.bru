@@ -1,0 +1,25 @@
+meta {
+  name: Editar
+  type: http
+  seq: 4
+}
+
+patch {
+  url: http://localhost:8080/admins/4
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "nombre": "Cooper",
+    "apellido": "Polci",
+    "email": "cooperpolci@linsi.com",
+    "password": "cooperpolci"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

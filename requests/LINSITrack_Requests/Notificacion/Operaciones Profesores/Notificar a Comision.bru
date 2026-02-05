@@ -1,0 +1,23 @@
+meta {
+  name: Notificar a Comision
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/notificaciones/notify-comision
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "mensaje": "Mensaje a todos los alumnos de la comision! Llevar calculadora",
+    "comision_id": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

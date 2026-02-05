@@ -1,0 +1,25 @@
+meta {
+  name: Crear
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/resultado-evaluacion
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "nota": 8.5,
+    "devolucion": "Excelente comprensión de los algoritmos de ordenamiento. Buena explicación de la complejidad temporal.",
+    "alumno_id": 1,
+    "evaluacion_id": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

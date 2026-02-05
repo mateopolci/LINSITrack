@@ -1,0 +1,23 @@
+meta {
+  name: Login (Alumno)
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://localhost:8080/auth/login
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email": "alumno@linsi.com",
+    "password": "alumno"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

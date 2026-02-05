@@ -1,0 +1,23 @@
+meta {
+  name: Notificar a Materia
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/notificaciones/notify-materia
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "mensaje": "Mensaje a todos los alumnos de Algoritmos! Instalar PSEINT",
+    "materia_id": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,22 @@
+meta {
+  name: Marcar todas como Leídas
+  type: http
+  seq: 5
+}
+
+patch {
+  url: http://localhost:8080/notificaciones/me/mark-all-read
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "mensaje": "Mensaje de Bruno modificado!"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,16 @@
+meta {
+  name: Descargar Archivo por ID de Entrega
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:8080/mis-entregas/1/archivo/download
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

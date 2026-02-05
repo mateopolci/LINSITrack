@@ -1,0 +1,16 @@
+meta {
+  name: Eliminar
+  type: http
+  seq: 6
+}
+
+delete {
+  url: http://localhost:8080/evaluaciones/17
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

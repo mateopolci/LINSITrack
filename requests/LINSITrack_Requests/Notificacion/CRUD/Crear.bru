@@ -1,0 +1,25 @@
+meta {
+  name: Crear
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/notificaciones
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "mensaje": "Mensaje test",
+    "fecha_hora": "2026-01-28T18:34:08.562618Z",
+    "leida": false,
+    "alumno_id": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

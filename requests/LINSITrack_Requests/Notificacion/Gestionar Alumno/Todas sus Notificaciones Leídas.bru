@@ -1,0 +1,16 @@
+meta {
+  name: Todas sus Notificaciones Leídas
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:8080/notificaciones/alumnos/5/read
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,26 @@
+meta {
+  name: Crear su entrega
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://localhost:8080/mis-entregas
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "fecha_hora": "2024-12-14 18:30:00",
+      "nota": 8.5,
+      "devolucion": "Excelente implementación de los algoritmos. Código limpio y bien documentado.",
+      "alumno_id": 1,
+      "tp_id": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,24 @@
+meta {
+  name: Editar
+  type: http
+  seq: 2
+}
+
+patch {
+  url: http://localhost:8080/tps/10
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "consigna": "Crear proyecto fullstack.",
+    "vigente": true,
+    "comision_id": 11
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

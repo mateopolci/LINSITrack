@@ -1,0 +1,20 @@
+meta {
+  name: Adjuntar Archivo por ID de Entrega
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:8080/mis-entregas/1/upload
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  file: @file(C:\Users\Mateo\Desktop\Endpoints_Test_Data\Entrega_Test_1.jpg) @contentType(File)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

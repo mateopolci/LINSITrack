@@ -1,0 +1,25 @@
+meta {
+  name: Crear
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/admins
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "nombre": "Martin",
+    "apellido": "Jorge",
+    "email": "martinjorge@linsi.com",
+    "password": "martinjorge"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

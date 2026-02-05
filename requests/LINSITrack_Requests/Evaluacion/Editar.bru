@@ -1,0 +1,22 @@
+meta {
+  name: Editar
+  type: http
+  seq: 5
+}
+
+patch {
+  url: http://localhost:8080/evaluaciones/17
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "observaciones": "Cambio de planes, llevar notebook"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

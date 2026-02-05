@@ -1,0 +1,25 @@
+meta {
+  name: Crear
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8080/evaluaciones
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "fecha_evaluacion": "2026-03-15T00:00:00Z",
+    "temas": "Algoritmos presencial a hoja.",
+    "observaciones": "Llevar hoja y papel",
+    "comision_id": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

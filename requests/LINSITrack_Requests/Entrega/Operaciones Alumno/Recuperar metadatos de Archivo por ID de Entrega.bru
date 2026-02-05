@@ -1,0 +1,16 @@
+meta {
+  name: Recuperar metadatos de Archivo por ID de Entrega
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:8080/mis-entregas/1/archivos
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

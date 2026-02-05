@@ -1,0 +1,23 @@
+meta {
+  name: Crear
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/materias
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "nombre": "Borrar",
+    "ano_carrera": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

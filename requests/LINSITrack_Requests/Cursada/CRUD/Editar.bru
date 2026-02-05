@@ -1,0 +1,25 @@
+meta {
+  name: Editar
+  type: http
+  seq: 4
+}
+
+patch {
+  url: http://localhost:8080/cursadas/8
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "ano_lectivo": 2024,
+    "nota_final": 8.5,
+    "nota_conceptual": 9,
+    "feedback": "El profesor mostró dominio del tema, explicó con claridad y usó buenos ejemplos prácticos; su retroalimentación fue precisa y útil para mejorar mi desempeño."
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

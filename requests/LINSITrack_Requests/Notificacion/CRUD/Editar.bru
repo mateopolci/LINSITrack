@@ -1,0 +1,22 @@
+meta {
+  name: Editar
+  type: http
+  seq: 1
+}
+
+patch {
+  url: http://localhost:8080/notificaciones/7
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "mensaje": "Mensaje de Bruno modificado!"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

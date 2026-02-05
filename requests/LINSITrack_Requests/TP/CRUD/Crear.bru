@@ -1,0 +1,24 @@
+meta {
+  name: Crear
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/tps
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "consigna": "TP de prueba",
+    "vigente": true,
+    "comision_id": 11
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

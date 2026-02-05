@@ -1,0 +1,20 @@
+meta {
+  name: Adjuntar Archivo por ID de Anexo
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/anexos/8/upload
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  file: @file(C:\Users\Mateo\Desktop\Endpoints_Test_Data\Anexo_Test_2.pdf) @contentType(File)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
