@@ -21,7 +21,7 @@ func SetupResultadoEvaluacionRoutes(router *gin.Engine, service *services.Result
 		adminProfesorResultados.GET("/alumno/:alumnoId", resultadoController.GetResultadosByAlumnoID)
 		adminProfesorResultados.GET("/evaluacion/:evaluacionId", resultadoController.GetResultadosByEvaluacionID)
 		adminProfesorResultados.POST("", resultadoController.CreateResultado)
-		adminProfesorResultados.PUT("/:id", resultadoController.UpdateResultado)
+		adminProfesorResultados.PATCH("/:id", resultadoController.UpdateResultado)
 	}
 
 	// Solo admin puede eliminar resultados
