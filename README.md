@@ -10,15 +10,9 @@ docker-compose up -d
 
 ## Documentacion
 
-## Server de Documentacion / Requests de la API
+## Carpeta de requests
 
-Correr el siguiente comando en la raiz del proyecto:
-
-```bash
-go run utils/requests/linsi_track_documentation.go
-```
-
-A su vez, también está disponible la carpeta ./requests/LINSITrack_Requests/ para importar en Bruno, Postman, etc, junto con archivos de prueba en ./requests/Endpoints_Test_Data para simular uploads.
+La carpeta ./requests/LINSITrack_Requests/ contiene ejemplos de todos los endpoints para importar en Bruno, Postman, etc, junto con archivos de prueba en ./requests/Endpoints_Test_Data para simular uploads.
 
 ### Auth
 
